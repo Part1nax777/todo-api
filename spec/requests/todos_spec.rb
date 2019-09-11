@@ -62,8 +62,8 @@ RSpec.describe 'Todos API', type: :request do
     context 'when the request invalid' do
       before { post '/todos', params: { title: 'Foobar' } }
 
-      it 'return status 422' do
-        expect(response).to have_http_status(422)
+      it 'return status 500' do
+        expect(response).to have_http_status(500)
       end
 
       it 'return a validation failure message' do

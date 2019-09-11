@@ -72,8 +72,8 @@ RSpec.describe 'Items API' do
     context 'when request attributes is invalid' do
       before { post "/todos/#{todo_id}/items", params: {} }
 
-      it 'returns status code 422' do
-        expect(response).to have_http_status(422)
+      it 'returns status code 500' do
+        expect(response).to have_http_status(500)
       end
 
       it 'return failure message' do
